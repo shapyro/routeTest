@@ -20,7 +20,7 @@ function handleRequest(req, res) {
         res.end(data);
       })
       break;
-    case "/css":
+    case "/frameworks":
       // return: displayCSS(path, req, res);
       fs.readFile(__dirname + '/cssFrameworks.html', function(err, data){
         res.writeHead(200, {"Content-Type": "text/html"})
