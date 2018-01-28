@@ -1,7 +1,7 @@
 var http = require('http')
 var fs = require('fs')
 
-var PORT = 8080
+var PORT = 7000;
 
 var server = http.createServer(handleRequest);
 
@@ -15,27 +15,27 @@ function handleRequest(req, res) {
   switch(path) {
     case "/":
       // return: displayRoot(path, req, res);
-      fs.readFile(__dirname + './index.html', function(err, data){
+      fs.readFile(__dirname + '/index.html', function(err, data){
         res.writeHead(200, { "Content-Type": "text/html"});
         res.end(data);
       })
       break;
     case "/css":
       // return: displayCSS(path, req, res);
-      fs.readFile(__dirname + './cssFrameworks.html', function(err, data){
+      fs.readFile(__dirname + '/cssFrameworks.html', function(err, data){
         res.writeHead(200, {"Content-Type": "text/html"})
         res.end(data);
       })
       break;
     case "/food":
       // return: displayFood(path, req, res);
-      fs.readFile(__dirname + './foods.html', function(err, data){
+      fs.readFile(__dirname + '/foods.html', function(err, data){
         res.writeHead(200, {"Content-Type": "text/html"})
         res.end(data);
       })
       break;
     case "/movies":
-      fs.readFile(__dirname + './movies.html', function(err, data){
+      fs.readFile(__dirname + '/movies.html', function(err, data){
         res.writeHead(200, {"Content-Type": "text/html"})
         res.end(data);
       })
